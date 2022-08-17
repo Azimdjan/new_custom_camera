@@ -49,7 +49,7 @@ class CameraPreview extends StatelessWidget {
     }
 
     return RotatedBox(
-      quarterTurns: _getQuarterTurns(),
+      // quarterTurns: _getQuarterTurns(),
       child: child,
     );
   }
@@ -61,15 +61,15 @@ class CameraPreview extends StatelessWidget {
     ].contains(_getApplicableOrientation());
   }
 
-  int _getQuarterTurns() {
-    final Map<DeviceOrientation, int> turns = <DeviceOrientation, int>{
-      DeviceOrientation.portraitUp: 0,
-      DeviceOrientation.landscapeRight: 1,
-      DeviceOrientation.portraitDown: 2,
-      DeviceOrientation.landscapeLeft: 3,
-    };
-    return turns[_getApplicableOrientation()]!;
-  }
+  // int _getQuarterTurns() {
+  //   final Map<DeviceOrientation, int> turns = <DeviceOrientation, int>{
+  //     DeviceOrientation.portraitUp: 0,
+  //     DeviceOrientation.landscapeRight: 1,
+  //     DeviceOrientation.portraitDown: 2,
+  //     DeviceOrientation.landscapeLeft: 3,
+  //   };
+  //   return turns[_getApplicableOrientation()]!;
+  // }
 
   DeviceOrientation _getApplicableOrientation() {
     return controller.value.isRecordingVideo
