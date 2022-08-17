@@ -49,7 +49,7 @@ class CameraPreview extends StatelessWidget {
     }
 
     return RotatedBox(
-      // quarterTurns: _getQuarterTurns(),
+      quarterTurns: 0,
       child: child,
     );
   }
